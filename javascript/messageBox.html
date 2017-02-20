@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <input placeholder="Enter Message Text Here" id="messageText" /><button id="addMessage">Add Message</button><input type="checkbox"
+        id="modal" />Modal
+    <hr>
+    <h1>PCS Web Page</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, accusamus incidunt iste magni atque. Consequuntur nemo
+        provident aliquid doloremque voluptas iure! Hic debitis deleniti illum minus, illo autem in labore dignissimos officiis
+        modi, ex reiciendis distinctio temporibus corrupti adipisci. Officia quas, harum mollitia nulla officiis doloremque
+        voluptatum, amet optio maxime.
+    </p>
+    <h2>Lorem ipsum dolor.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita laborum omnis tempora amet! Perferendis repellat consectetur
+        error iure numquam, aut! Deserunt minus nulla est commodi sit suscipit nostrum voluptatum atque quis, excepturi,
+        a quaerat, neque maxime soluta voluptatem totam debitis. Perferendis fuga amet nemo, fugiat eos repudiandae a dignissimos
+        architecto dolor assumenda! Eaque eos officia placeat omnis commodi possimus temporibus voluptatum voluptatem, quis
+        atque perspiciatis minima at, error laboriosam accusamus vitae expedita pariatur ex aspernatur! Temporibus labore
+        neque, quae totam voluptatem. Temporibus in quaerat autem quia, quisquam officia dicta unde quas iure numquam ducimus
+        tenetur aspernatur animi! Accusantium tenetur natus possimus, quia earum ad, perferendis, rem aspernatur dolorem
+        molestias esse fuga assumenda! Obcaecati nam, rem ad dolorem dolores beatae magnam reprehenderit quibusdam accusamus
+        eaque praesentium in totam iure iste officia, inventore repudiandae hic quaerat! Quae perspiciatis veritatis debitis,
+        impedit consequuntur expedita error inventore. Architecto asperiores libero voluptas nobis voluptatum saepe expedita
+        in veritatis aliquid dolorum nostrum unde ratione quod suscipit vitae cumque reiciendis, quasi non voluptate, accusantium
+        sunt alias? Autem itaque, recusandae animi qui consequatur debitis, quia, eveniet nam enim dolores quos dolore quisquam
+        accusamus odio perferendis. Cum voluptates ipsam delectus accusantium quaerat animi odio fuga placeat voluptatibus
+        nulla deserunt quod alias itaque voluptas vero facere, magni excepturi. Molestiae dolorum iste pariatur aliquam nisi
+        veniam soluta unde nihil adipisci, hic provident accusantium qui modi, rem eligendi excepturi quas! Ducimus necessitatibus
+        quia consectetur nemo, dolorem sint nisi sunt, adipisci natus id, nihil eum qui nobis quae vero atque praesentium
+        laudantium aspernatur.
+    </p>
+
+    <script src="messageBox.js"></script>
+
+    <script>
+        (function () {
+            var messageInput = document.getElementById('messageText'),
+                modalCheckbox = document.getElementById('modal');
+
+            document.getElementById("addMessage").addEventListener('click', function() {
+                pcs.messagebox.show(messageInput.value, modalCheckbox.checked);
+            });
+        }());
+
+        pcs.messagebox.show("Hello World!");
+        pcs.messagebox.show("Hello Again!", false, ['Yes', 'No', 'Maybe'], function (userChoice) {
+            console.log('You picked ', userChoice);
+        });
+    </script>
+</body>
+
+</html>

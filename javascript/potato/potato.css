@@ -1,0 +1,27 @@
+html, body, #main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background: url("images/head.png") no-repeat center center;
+    background-size: contain;
+}
+
+.part {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.part img {
+    width: 100px;
+    height: 100px;
+}
+
+.ui-wrapper {
+    display: inline-block;
+}
+

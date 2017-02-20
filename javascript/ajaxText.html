@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .spinner {
+            width: 22px;
+            vertical-align: middle;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    File Name: <input id="file" /> <button id="load">Load Text</button><img class="spinner" src="spinner.gif" alt="loading..."
+    />
+    <hr/>
+    <pre id="theText" value="someText.txt">
+    </pre>
+    <script src="/jquery-3.1.1.min.js"></script>
+    <script src="ajaxText.js"></script>
+</body>
+
+</html>

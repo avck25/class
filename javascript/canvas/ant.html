@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #theCanvas {
+        border: 1px solid black;
+        /*width: 100%;
+        height: 100%;*/
+        box-sizing: border-box;
+    }
+
+    .controls {
+        position: absolute;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <input type="number" id="numAnts" value="100" /> <input type="color" id="antColor" /><button id="addAnts">Add Ants</button>
+    </div>
+    <canvas id="theCanvas" width="600" height="500"></canvas>
+
+    <script src="ant.js"></script>
+</body>
+
+</html>

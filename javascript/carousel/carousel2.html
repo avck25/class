@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        #picture {
+            display: none;
+        }
+        
+        #picture figure {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        #left {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    Enter Tag <input id="tag" />
+    <button id="go">Go!</button>
+    <button id="slideshow">Start Slideshow</button>
+
+    <div id="picture">
+        <img id="left" src="arrow.png" alt="left" />
+        <figure>
+            <img/>
+            <figcaption>
+                <h2></h2>
+            </figcaption>
+        </figure>
+        <img id="right" src="arrow.png" alt="right" />
+    </div>
+
+    <script src="/jquery-3.1.1.min.js"></script>
+    <script src="carousel2.js"></script>
+</body>
+
+</html>

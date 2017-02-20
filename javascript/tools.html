@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="it">DOM Manipulation is fun!</h1>
+    <h1 id="it2">DONALD TRUMP is fun!</h1>
+    <h1 id="it3">Im going slowly</h1>
+    <script src="tools.js"></script>
+    <script>
+        var it = pcs.tools.wrap("it")
+            .css('backgroundColor', 'red')
+            .css('fontSize', '50px')
+            .pulsate();
+
+        pcs.tools.wrap('it2')
+            .css('backgroundColor', 'blue')
+            .css('color', 'yellow')
+            .pulsate(50);
+
+        pcs.tools.wrap('it3')
+            .css('backgroundColor', 'green')
+            .css('fontFamily', 'cursive')
+            .pulsate('slow');
+    </script>
+</body>
+
+</html>

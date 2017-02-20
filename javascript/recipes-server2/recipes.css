@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+}
+
+#recipe {
+    display: none;
+}
+
+#recipePic {
+    height: 300px;
+}
+
+#ingredients {
+    list-style-type: none;
+    padding: 0;
+}

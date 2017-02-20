@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: yellow;
+            border: 3px solid black;
+            width: 75px;
+            height: 75px;
+            position: absolute;
+        }
+
+        .dragging {
+            border: 3px dashed red;
+        }
+
+        .controls {
+            position: relative;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="draggable controls">
+        <button id="addBox">Add box</button> <input type="color" id="color" value="#FFFF00" /> Double click to remove.
+    </div>
+    <div class=" box draggable "></div>
+    <script src="/jquery-3.1.1.min.js "></script>
+    <script src="drag.js "></script>
+</body>
+
+</html>

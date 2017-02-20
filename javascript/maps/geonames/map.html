@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        html,
+        body,
+        #map {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #sidebar {
+            width: 25%;
+            float: left;
+
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        #controls {
+            text-align: center;
+            padding: 4px;
+        }
+
+        #sidebar {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0 4px;
+        }
+        
+        #sidebar li {
+            cursor: pointer;
+            border: 1px solid black;
+            margin-bottom: 4px;
+        }
+        
+        #sidebar img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <div id="controls">
+            <input id="tags" placeholder="What?" />
+            <input type="number" min="1" max="100" id="numResults" value="10" />
+            <button id="go">Go!</button>
+            <button id="clear">Clear</button>
+        </div>
+        <hr/>
+        <ul id="places"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4Ecg3O7TPLyXsEar8IZVkuo9XhF9ypDo">
+    </script>
+<script src="/jquery-3.1.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="map.js"></script>
+</body>
+
+</html>

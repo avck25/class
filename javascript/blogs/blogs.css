@@ -1,0 +1,28 @@
+body {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.comments {
+    border: 1px solid black;
+    display: none;
+    font-size: .8em;
+}

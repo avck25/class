@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    Name: <input id="nameInput" /> Hello <span id="nameSpan"></span>
+
+    <script>
+        var nameInput = document.getElementById('nameInput'),
+            nameSpan = document.getElementById('nameSpan');
+
+        nameInput.addEventListener('keyup', function () {
+            nameSpan.innerHTML = nameInput.value;
+        });
+    </script>
+</body>
+
+</html>

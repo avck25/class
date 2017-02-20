@@ -1,0 +1,10 @@
+<select #categoryList (change)="categorySelected(categoryList.value)">
+  <option value="-1">Choose a category</option>
+  <option *ngFor="let category of categories; let i = index;" value="{{i}}">{{category.name}}</option>
+</select>
+<ul>
+  <li *ngFor="let item of selectedCategory?.items">{{item.name}} - {{item.price}}</li>
+</ul>
+<div *ngIf="selectedCategory && (!selectedCategory.items || selectedCategory.items.length === 0)">
+  No items in category
+</div>

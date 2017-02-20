@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="stopwatch.css" />
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        .stopwatch {
+            border: 1px dashed red;
+            padding: 20px;
+            color: red;
+            background-color: black;
+            font-family: consolas, monospace;
+            display: inline-block;
+            height: 190px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PCS Stopwatch</h1>
+    <div id="left" class="stopwatch"></div>
+    <div id="right" class="stopwatch"></div>
+    <hr>
+    <h5>Copyright PCS 2016</h5>
+    <script src="stopwatch2.js"></script>
+
+    <script>
+    (function () {
+        var stopwatch1 = pcs.tools.stopwatch(document.getElementById('left')),
+            stopwatch2 = pcs.tools.stopwatch(document.getElementById('right'));
+        stopwatch1.toggle();
+        setTimeout(function() {
+            stopwatch1.toggle();
+            //stopwatch1.ticks = 45345345;
+            console.log('Expected about 500', stopwatch1.ticks());
+            stopwatch1.reset();
+            console.log('Expected 0', stopwatch1.ticks());
+        }, 5000);
+    }());
+    </script>
+</body>
+
+</html>

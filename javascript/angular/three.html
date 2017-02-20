@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    Name: <input id="nameInput" /> Hello <span id="nameSpan"></span>
+
+    <script src="/underscore-min.js"></script>
+    <script src="/backbone-min.js"></script>
+    <script src="/jquery-3.1.1.min.js"></script>
+    <script>
+        var nameInput = $('#nameInput'),
+            nameSpan = $('#nameSpan');
+
+        var model = new Backbone.Model({
+            name: ''
+        });
+
+        nameInput.on('keyup', function () {
+            model.set('name', nameInput.val());
+        });
+
+        model.on('change:name', function () {
+            nameSpan.text(model.get('name'));
+        });
+    </script>
+</body>
+
+</html>
